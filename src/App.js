@@ -1,5 +1,6 @@
 import ButtonClick from "./components/HOC/ButtonClick/ButtonClick";
 import HoverCount from "./components/HOC/HoverCount/HoverCount";
+import UseCallback from "./components/use-callback/useCallback";
 import WithUseMemo from "./components/use-memo/WithUseMemo";
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       <HoverCount /> */}
 
       {/* for UseMemo */}
-      <WithUseMemo/>
+      {/* <WithUseMemo/> */}
+      <UseCallback />
     </div>
   );
 }
