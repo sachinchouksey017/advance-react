@@ -1,0 +1,17 @@
+.main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .button {
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .count {
+        font-size: 45px;
+    }
+}
