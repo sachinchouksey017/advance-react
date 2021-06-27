@@ -1,16 +1,16 @@
-export const GET_NOTES = 'get_notes'
-export const EXPAND_CREATE = 'expand'
-export const SET_NOTES = 'SET_NOTES'
+import { getAllNotesAPI } from '../../services/note.service'
+import { GET_NOTES, SET_NOTES, EXPAND_CREATE } from './action.types'
 
 
 export const getAllNotes = () => ({ type: GET_NOTES })
 export const setAllNotes = (data) => ({ type: SET_NOTES, payload: data })
 export const toggleCreateNote = () => ({ type: EXPAND_CREATE })
 
+// for redux-thunk
 export const fetchAllNotes = () => {
     return (dispatch) => {
-        fetch('https://jsonplaceholder.typicode.com/todos').then(ele=>ele.json()).then(data => {
-            console.log("data",data);
+        getAllNotesAPI().then(ele => ele.json()).then(data => {
+            console.log("data", data);
             dispatch(setAllNotes(data))
         }).catch(err => {
             dispatch(setAllNotes([]))

@@ -1,4 +1,4 @@
-import { GET_NOTES, SET_NOTES } from "../actions/actions";
+import { GET_NOTES, SET_NOTES } from "../actions/action.types";
 
 let initialState = {
     allNotes: []

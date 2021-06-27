@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import CreateNote from '../create-note/CreateNote';
 import Display from '../display/Display';
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchAllNotes } from '../../../Redux/actions/actions';
+import { fetchAllNotes, getAllNotes } from '../../../Redux/actions/actions';
 const Dashboard = () => {
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(fetchAllNotes())
+        dispatch(getAllNotes())
     }, [])
     return (
         <>

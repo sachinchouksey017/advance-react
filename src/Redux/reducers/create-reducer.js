@@ -1,4 +1,4 @@
-import { EXPAND_CREATE, toggleCreateNote } from "../actions/actions";
+import { EXPAND_CREATE } from "../actions/action.types";
 
 let initialState = {
     open: false
